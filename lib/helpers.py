@@ -104,7 +104,6 @@ def create_art(id_):
         print("Error creating art... :( >> ", exc)
 
 def update_art(id_, art_id):
-    artist_id = id_
 
     if art := Art.find_by_id(art_id):
         try:
