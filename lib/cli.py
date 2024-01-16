@@ -188,7 +188,7 @@ def artist_menu():
                     or
         Please select an option:
           f) FILTER ARTISTS
-          a) ADD AN ARTIST
+          a) ADD A NEW ARTIST
           b) GO BACK TO MAIN MENU
           e) EXIT THE PROGRAM
     """)
@@ -199,10 +199,10 @@ def artist_info_menu():
         Enter number for artwork's details
                     or
         Please select an option:
-          a) ADD AN ART
-          u) UPDATE ARTIST INFO
-          d) DELETE ARTIST
-          b) GO BACK TO PREVIOUS MENU
+          a) ADD A NEW ARTWORK
+          u) UPDATE THIS ARTIST
+          d) DELETE THIS ARTIST
+          b) GO BACK TO THE PREVIOUS MENU
           e) EXIT THE PROGRAM
           """)
     
@@ -214,17 +214,17 @@ def artist_filter_menu():
           m) MEDIUM
 
         Or:
-          b) GO BACK TO MAIN MENU
+          b) GO BACK TO THE MAIN MENU
           e) EXIT THE PROGRAM
           
         """)
 
 def art_info_menu():
     print("""
-        --- ART INFORMATION MENU ---
+        --- ARTWORK INFORMATION MENU ---
         Please select an option:
-          u) UPDATE ART INFO
-          d) DELETE ART
+          u) UPDATE THIS ARTWORK
+          d) DELETE THIS ARTWORK
           b) GO BACK TO PREVIOUS MENU
           e) EXIT THE PROGRAM
     """)
