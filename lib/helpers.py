@@ -9,18 +9,18 @@ def list_artists():
     print("*** Artists ***")
 
     for artist in artists:
-        print(f'{artist.id} ) {artist.name}')
+        print(f'  {artist.id}) {artist.name}')
 
 def display_artist_info(id_):
     artist = Artist.find_by_id(id_)
     print("*** Artist Information ***")
-    print(f'Name: {artist.name}\nLocation: {artist.location}\nMedium: {artist.medium}')
+    print(f'  Name: {artist.name}\n  Location: {artist.location}\n  Medium: {artist.medium}')
 
 def filter_artists(attr, value):
     artists = Artist.filter_by_attribute(attr, value)
     if artists:
         for artist in artists:
-            print(f'{artist.id} ) {artist.name}')
+            print(f'  {artist.id}) {artist.name}')
     else:
         print("No artists found... :(")
 
@@ -31,7 +31,7 @@ def filter_choice_list(attr):
 def print_choices(li):
     if li:
         for choice in li:
-            print(f"{li.index(choice) + 1}: {choice}")
+            print(f"  {li.index(choice) + 1}) {choice}")
     else:
         print("No selections found... :(")
 
@@ -41,7 +41,7 @@ def display_art_by_artist(id_):
     print(f'*** Artworks by {artist.name} ***')
     if arts:
         for art in arts:
-            print(f'{arts.index(art) + 1}) "{art.title}" / {art.medium} / {art.price} USD')
+            print(f'  {arts.index(art) + 1}) "{art.title}" ')
     else:
         print("No artworks found... :(")
 
@@ -135,4 +135,4 @@ def exit_program():
 def display_art_info(art_id):
     art = Art.find_by_id(art_id)
     print("*** Artwork Information ***")
-    print(f'"{art.title}" / {art.medium} / {art.price} USD')
+    print(f'  Title: "{art.title}"\n  Medium: {art.medium}\n  Price: {art.price} USD')

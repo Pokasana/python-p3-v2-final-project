@@ -26,6 +26,7 @@ def main():
         if choice.lower() == "v":
             list_artists()
             artists()
+
         elif choice.lower() == "e":
             exit_program()
         else:
@@ -136,6 +137,7 @@ def art_info(id_, art_id):
         choice = input("> ")
         if choice.lower() == "u":
             update_art(id_, art_id)
+            blank()
             display_art_info(art_id)
             art_info(id_, art_id)
 
