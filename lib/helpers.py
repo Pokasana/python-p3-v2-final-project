@@ -46,9 +46,9 @@ def display_art_by_artist(id_):
         print("- No artworks found... :(")
 
 def create_artist():
-    name = input("Enter the artist's name: ")
-    location = input("Enter the artist's location: ")
-    medium = input("Enter the artist's medium: ")
+    name = input("Enter the artist's name> ")
+    location = input("Enter the artist's location> ")
+    medium = input("Enter the artist's medium> ")
 
     try:
         artist = Artist.create(name, location, medium)
@@ -62,15 +62,16 @@ def create_artist():
 def update_artist(id_):
     if artist := Artist.find_by_id(id_):
         try:
-            name = input("Hit <ENTER> to keep current name, or type in new name: ")
+            name = input("Hit <ENTER> to keep current name, or type in new name> ")
             artist.name = name if name != "" else artist.name
-            location = input("Hit <ENTER> to keep current location, or type in new location: ")
+            location = input("Hit <ENTER> to keep current location, or type in new location> ")
             artist.location = location if location != "" else artist.location
-            medium = input("Hit <ENTER> to keep current medium, or type in new medium: ")
+            medium = input("Hit <ENTER> to keep current medium, or type in new medium> ")
             artist.medium = medium if medium != "" else artist.medium
 
             artist.update()
-            print(f"{artist.name}'s information has been updated! :)")
+            print("")
+            print(f"- {artist.name}'s information has been updated! :)")
 
         except Exception as exc:
             print(f'- Error updating artist information... :( >> ', exc)
@@ -80,7 +81,6 @@ def delete_artist(id_):
         artist.delete()
         print("")
         print(f'- Artist deleted ! :) >> {artist.name}')
-        print("")
     else:
         print(f'- Artist not found... :(') 
 
@@ -94,8 +94,8 @@ def index_art_id_converter(artist_id, index):
 def create_art(id_):
     artist_id = id_
     title = input("Enter the title: ")
-    medium = input("Enter the medium: ")
-    price = int(input("Enter the price: "))
+    medium = input("Enter the medium> ")
+    price = int(input("Enter the price> "))
     # artist_id = int(input("Enter the artist's id: "))
 
     try:
@@ -111,11 +111,11 @@ def update_art(art_id):
 
     if art := Art.find_by_id(art_id):
         try:
-            title = input("Hit <ENTER> to keep current title, or type in new title: ")
+            title = input("Hit <ENTER> to keep current title, or type in new title> ")
             art.title = title if title != "" else art.title
-            medium = input("Hit <ENTER> to keep current medium, or type in new medium: ")
+            medium = input("Hit <ENTER> to keep current medium, or type in new medium> ")
             art.medium = medium if medium != "" else art.medium
-            price = input("Hit <ENTER> to keep current price, or type in new price: ")
+            price = input("Hit <ENTER> to keep current price, or type in new price> ")
             art.price = int(price) if price != "" else art.price
 
             art.update()
@@ -129,12 +129,13 @@ def delete_art(art_id):
 
     if art := Art.find_by_id(art_id):
         art.delete()
-        print(f'Artwork deleted! :) {art.title}')
+        print("")
+        print(f'- Artwork deleted! :) {art.title}')
     else:
-        print(f'Artwork not found... :(')
+        print(f'- Artwork not found... :(')
 
 def exit_program():
-    print("Goodbye!")
+    print("- Goodbye!")
     exit()
 
 def display_art_info(art_id):

@@ -104,7 +104,7 @@ def artist_filter():
             li = filter_choice_list("location")
             print_choices(li)
             
-            num = int(input("   Enter the number: "))
+            num = int(input("Enter the number> "))
             value = li[num - 1]
 
             blank()
@@ -116,7 +116,7 @@ def artist_filter():
             li = filter_choice_list("medium")
             print_choices(li)
             
-            num = int(input("   Enter the number: "))
+            num = int(input("Enter the number> "))
             value = li[num - 1]
 
             blank()
