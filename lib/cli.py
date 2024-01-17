@@ -136,7 +136,7 @@ def art_info(id_, art_id):
     while True:
         choice = input("> ")
         if choice.lower() == "u":
-            update_art(id_, art_id)
+            update_art(art_id)
             blank()
             display_art_info(art_id)
             art_info(id_, art_id)

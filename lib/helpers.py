@@ -22,7 +22,7 @@ def filter_artists(attr, value):
         for artist in artists:
             print(f'  {artist.id}) {artist.name}')
     else:
-        print("No artists found... :(")
+        print("- No artists found... :(")
 
 def filter_choice_list(attr):
     choices = Artist.get_list_of(attr)
@@ -33,7 +33,7 @@ def print_choices(li):
         for choice in li:
             print(f"  {li.index(choice) + 1}) {choice}")
     else:
-        print("No selections found... :(")
+        print("- No selections found... :(")
 
 def display_art_by_artist(id_):
     artist = Artist.find_by_id(id_)
@@ -43,7 +43,7 @@ def display_art_by_artist(id_):
         for art in arts:
             print(f'  {arts.index(art) + 1}) "{art.title}" ')
     else:
-        print("No artworks found... :(")
+        print("- No artworks found... :(")
 
 def create_artist():
     name = input("Enter the artist's name: ")
@@ -52,11 +52,12 @@ def create_artist():
 
     try:
         artist = Artist.create(name, location, medium)
-        print(f'New artist created! :)')
+        print("")
+        print(f'- New artist created! :)')
         print("")
         display_artist_info(artist.id)
     except Exception as exc:
-        print("Error creating artist... :( >>", exc)
+        print("- Error creating artist... :( >>", exc)
 
 def update_artist(id_):
     if artist := Artist.find_by_id(id_):
@@ -72,14 +73,16 @@ def update_artist(id_):
             print(f"{artist.name}'s information has been updated! :)")
 
         except Exception as exc:
-            print(f'Error updating artist information... :( >> ', exc)
+            print(f'- Error updating artist information... :( >> ', exc)
 
 def delete_artist(id_):
     if artist := Artist.find_by_id(id_):
         artist.delete()
-        print(f'Artist deleted ! :) >> {artist.name}')
+        print("")
+        print(f'- Artist deleted ! :) >> {artist.name}')
+        print("")
     else:
-        print(f'Artist not found... :(') 
+        print(f'- Artist not found... :(') 
 
 ##ART'S FUNCTIONS
 def index_art_id_converter(artist_id, index):
@@ -97,13 +100,14 @@ def create_art(id_):
 
     try:
         art = Art.create(title, price, medium, artist_id)
-        print(f'New art created! :)')
+        print("")
+        print(f'- New art created! :)')
         print("")
         display_art_info(art.id)
     except Exception as exc:
-        print("Error creating art... :( >> ", exc)
+        print("- Error creating art... :( >> ", exc)
 
-def update_art(id_, art_id):
+def update_art(art_id):
 
     if art := Art.find_by_id(art_id):
         try:
@@ -115,10 +119,11 @@ def update_art(id_, art_id):
             art.price = int(price) if price != "" else art.price
 
             art.update()
-            print(f'"{art.title}" has been updated! :)')
+            print("")
+            print(f'- "{art.title}" has been updated! :)')
 
         except Exception as exc:
-            print(f"Error updating artwork... :( >> ", exc)
+            print(f"- Error updating artwork... :( >> ", exc)
 
 def delete_art(art_id):
 
