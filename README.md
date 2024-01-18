@@ -97,6 +97,9 @@ Artwork Information Menu
     delete_art - delete the selected artwork from the database and clear the instance id
     index_art_id_converter - returns the artwork's instance id that was found by the index of the list of artworks by the selected artist
 
+## Models
+![Alt text](image.png)
+
 ## Functions in Models
 ### Artist
     Setter/Getter for properties (name, location and medium)
