@@ -33,18 +33,19 @@ View, edit and delete data of artists and artworks in the database.
     └── helpers.py
 ```
 
-This application has two models, artist and art.
-These files are responsible for the actual interaction witth the database.
-helpers.py is to handle events and connect the database to the user interface.
-cli.py contains functions to manage the appearance on the comand line interface.
-
+This application has two models, artist and art. These files are responsible for the actual interaction, pusing data to/retrieving data from the database.
+helpers.py has functions to handle events and works as an intermediate of the database and the user interface.
+cli.py contains functions to what and how things are going to be displayed on the comand line interface.
 
 ---
 
-## How it works
+## The out like of this app
+The user can chose functions by typing in a number or a letter that's listed in the choices.
 
+The menuing is structured with some levels.
 
----
-
-## How each section actually works
-
+─── Main Menu
+    └── Artist Management Menu
+        ├── Filter Menu
+        └── Artist Information Menu
+            └── Artwork Information Menu

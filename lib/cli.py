@@ -125,7 +125,8 @@ def artist_filter():
             artists()
             blank()
         elif choice.lower() == "b":
-            main()
+            list_artists()
+            artists()
         elif choice.lower() == "e":
             exit_program()
         else:
