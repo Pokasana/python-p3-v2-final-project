@@ -1,18 +1,18 @@
 # CLI+ORM Application "Artist Finder"
 
-In this README file, you can find explanation of:
+In this README file, you can find an explanation of:
 * What this app can do
 * Structure of files
-* What each files for
+* What is each file for
 * How it works  - outline
-* How each section actually works
+* How each section works
 
 ## How this application works
 - Users interact with the application through CLI.
-- The user interaction will trigger objects relational mapping to retrieve the results from the database.
+- The user interaction will trigger object-relational mapping to retrieve the results from the database.
 
 ## What user can do with this application
-View, edit and delete data of artists and artworks in the database.
+View, edit, and delete data of artists and artworks in the database.
 
 ## The Directory Structure
 
@@ -31,14 +31,14 @@ View, edit and delete data of artists and artworks in the database.
     └── helpers.py
 ```
 
-This application has two models, artist and art. These files are responsible for the actual interaction, pusing data to/retrieving data from the database.
+This application has two models, artist and art. These files are responsible for the actual interaction, pushing data to/retrieving data from the database.
 helpers.py has functions to handle events and works as an intermediate of the database and the user interface.
-cli.py contains functions to what and how things are going to be displayed on the comand line interface.
+cli.py contains functions for what and how things are going to be displayed on the command line interface.
 
 ---
 
 ## The functionality of this app
-The user can chose functions by typing in a number or a letter that's listed in the choices.
+The user can choose functions by typing in a number or a letter that's listed in the choices.
 
 The menuing is structured with some levels.
 
@@ -53,7 +53,7 @@ Main Menu
  - To navigate the user to the list of artists
  - Exit from the application
 
-Artist Magement Menu
+Artist Management Menu
  - Showing the artist's details
  - To navigate the user to the Filter Menu
  - To add an artist to the database
@@ -81,19 +81,19 @@ Artwork Information Menu
 
 # For Developers
 ## Helper Functions - lib/helpers.py
-    exit_program - exits the user from the application with exit() function
+    exit_program - exits the user from the application with the exit() function
     list_artists - prints all the artists in the database 
-    filter_artists - prints all the artists has the maching attributes that has passed in as an argument
+    filter_artists - prints all the artists have the matching attributes that have passed in as an argument
     filter_choice_list - return a list of existing values of the attributes that the user is filtering with
     print_choices - print the values in the filter choice list
-    display_artist_info - prints selected artist's information (Name, location and medium)
-    create_artist - creates an artist instance and save it in the database
+    display_artist_info - prints selected artist's information (Name, location, and medium)
+    create_artist - creates an artist instance and saves it in the database
     update_artist - update the selected artist instance and update the database accordingly
     delete_artist - delete the selected artist from the database and clear the instance id
     display_art_by_artist - prints all the artworks that belong to the selected artist
-    display_art_info - prints selected artwork's information (Title, medium and price)
-    create_art - creates an artwork instance and save it into the database
-    update_art - updates the selected artwork instance and update the database accordingly
+    display_art_info - prints selected artwork's information (Title, medium, and price)
+    create_art - creates an artwork instance and saves it into the database
+    update_art - updates the selected artwork instance and updates the database accordingly
     delete_art - delete the selected artwork from the database and clear the instance id
     index_art_id_converter - returns the artwork's instance id that was found by the index of the list of artworks by the selected artist
 
@@ -106,23 +106,23 @@ Artwork Information Menu
 
     Class Methods
     - create_table(cls)
-        Create table 'artists' if it's not already exists
+        Create table 'artists' if it does not already exist
     - drop_table(cls)
         Delete table 'artists' if it exists
     - create(cls, name, location, medium)
-        Create new artist instance, save it in the table, assign the instance id and add the instance object into the class instance 'all'.
+        Create a new artist instance, save it in the table, assign the instance id, and add the instance object into the class instance 'all'.
     - instance_from_db(cls, row)
-        Retriave a row from the table and create an artist object based on the values of columns in the row.
+        Retrieve a row from the table and create an artist object based on the values of columns in the row.
     - get_all(cls)
-        Retrieve all rows from artists table, and return a list of artist objects that were created from each rows.
+        Retrieve all rows from the artist's table, and return a list of artist objects that were created from each row.
     - find_by_id(cls, id)
-        Get a row that has matching instance id that was passed in as an argument, and return an artist object that was generated from the row.
+        Get a row that has a matching instance id that was passed in as an argument, and return an artist object that was generated from the row.
     - filter_by_attribute(cls, attr, value)
         Take two arguments, attr and value. Return a list of artist objects that were generated by rows with the matching attribute(attr)'s value with the value argument.
 
     Instance Methods
     - save(self):
-        Insert the instance into the artist table, retrieve the row id from the table and assign it to the artist instance's id attribute. It also add the artist object into the dictionary 'all'.
+        Insert the instance into the artist table, retrieve the row id from the table, and assign it to the artist instance's id attribute. It also adds the artist object into the dictionary 'all'.
     - update(self)
         Update the row in the artist table.
     -delete(self)
@@ -139,21 +139,21 @@ Artwork Information Menu
 
     Class Methods
     - create_table(cls)
-        Create table 'arts' if it's not already exists
+        Create table 'arts' if it does not already exist
     - drop_table(cls)
         Delete table 'arts' if it exists
     - create(cls, title, price, medium, artist_id)
-        Create new art instance, save it in the table, assign the instance id and add the instance object into the class instance 'all'.
+        Create a new art instance, save it in the table, assign the instance id, and add the instance object into the class instance 'all'.
     - instance_from_db(cls, row)
-        Retriave a row from the table and create an art object based on the values of columns in the row.
+        Retrieve a row from the table and create an art object based on the values of columns in the row.
     - get_all(cls)
-        Retrieve all rows from arts table, and return a list of art objects that were created from each row.
+        Retrieve all rows from the arts table, and return a list of art objects that were created from each row.
     - find_by_id(cls, id)
         Get a row that has a matching instance id that was passed in as an argument, and return an artist object that was generated from the row.
 
     Instance Methods
     - save(self):
-        Insert the instance into the arts table, retrieve the row id from the table and assign it to the art instance's id attribute. It also add the art object into the dictionary 'all'.
+        Insert the instance into the arts table, retrieve the row id from the table, and assign it to the art instance's id attribute. It also adds the art object into the dictionary 'all'.
     - update(self)
         Update the row in the art table.
     -delete(self)
