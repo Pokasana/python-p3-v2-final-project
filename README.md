@@ -63,7 +63,7 @@ Artist Magement Menu
  - Exit from the application
 
 Filter Menu
- - To filter the list of artists by location or medium attributes
+ - To filter the list of artists by location or medium attributes >> the user will be prompted to the Artist Management Menu with the result
  - 
 
 User can exit the application from any level.

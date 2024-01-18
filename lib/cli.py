@@ -110,9 +110,7 @@ def artist_filter():
             blank()
             print(f"*** Artists in {value} ***")
             filter_artists("location", value)
-            blank()
 
-            list_artists()
             artists()
 
         elif choice.lower() == "m":
@@ -126,8 +124,6 @@ def artist_filter():
             print(f"*** Artist with {value} ***")
             filter_artists("medium", value)
 
-            blank()
-            list_artists()
             artists()
         elif choice.lower() == "b":
             list_artists()
