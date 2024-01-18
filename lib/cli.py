@@ -110,6 +110,9 @@ def artist_filter():
             blank()
             print(f"*** Artists in {value} ***")
             filter_artists("location", value)
+            blank()
+
+            list_artists()
             artists()
 
         elif choice.lower() == "m":
@@ -122,8 +125,10 @@ def artist_filter():
             blank()
             print(f"*** Artist with {value} ***")
             filter_artists("medium", value)
-            artists()
+
             blank()
+            list_artists()
+            artists()
         elif choice.lower() == "b":
             list_artists()
             artists()
@@ -217,7 +222,7 @@ def artist_filter_menu():
           m) MEDIUM
 
         Or:
-          b) GO BACK TO THE MAIN MENU
+          b) GO BACK TO THE ARTISTS MENU
           e) EXIT THE PROGRAM
           
         """)

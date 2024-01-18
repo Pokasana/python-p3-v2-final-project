@@ -49,3 +49,21 @@ The menuing is structured with some levels.
         ├── Filter Menu
         └── Artist Information Menu
             └── Artwork Information Menu
+
+Each menu has these abilities:
+Main Menu
+ - To navigate the user to the list of artists
+ - Exit from the application
+
+Artist Magement Menu
+ - Showing the artist's details
+ - To navigate the user to the Filter Menu
+ - To add an artist to the database
+ - To navigate the user to the previous menu (Main Menu)
+ - Exit from the application
+
+Filter Menu
+ - To filter the list of artists by location or medium attributes
+ - 
+
+User can exit the application from any level.
