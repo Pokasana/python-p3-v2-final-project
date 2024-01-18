@@ -153,8 +153,8 @@ class Artist:
         rows = CURSOR.execute(sql,(value,)).fetchall()
         return [cls.instance_from_db(row) for row in rows]
     
-    @classmethod
-    def get_list_of(cls, attr):
+    @staticmethod
+    def get_list_of(attr):
         list = set()
 
         sql = f"""
