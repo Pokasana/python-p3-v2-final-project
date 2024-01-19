@@ -14,6 +14,8 @@ In this README file, you can find an explanation of:
 ## What user can do with this application
 View, edit, and delete data of artists and artworks in the database.
 
+---
+
 ## The Directory Structure
 
 ```console
@@ -37,14 +39,14 @@ cli.py contains functions for what and how things are going to be displayed on t
 
 ---
 
-## The functionality of this app
+## The functionality
 The user can choose functions by typing in a number or a letter that's listed in the choices.
 
 The menuing is structured with some levels.
 
 ```
 
-─── Main Menu
+    Main Menu
     └── Artist Management Menu
         ├── Filter Menu
         └── Artist Information Menu
@@ -53,6 +55,7 @@ The menuing is structured with some levels.
 ```
 
 Each menu has these abilities:
+
 Main Menu
  - To navigate the user to the list of artists
  - Exit from the application
