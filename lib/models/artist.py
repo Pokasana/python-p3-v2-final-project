@@ -166,7 +166,7 @@ class Artist:
         for column in columns:
             list.add(column[0])
         return [item for item in list]
-    
+        
     def arts(self):
         from models.art import Art
         sql = """

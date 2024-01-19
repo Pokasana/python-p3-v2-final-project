@@ -42,11 +42,15 @@ The user can choose functions by typing in a number or a letter that's listed in
 
 The menuing is structured with some levels.
 
+```
+
 ─── Main Menu
     └── Artist Management Menu
         ├── Filter Menu
         └── Artist Information Menu
             └── Artwork Information Menu
+
+```
 
 Each menu has these abilities:
 Main Menu
