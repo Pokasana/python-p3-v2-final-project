@@ -9,5 +9,8 @@ from helpers import *
 def reset_db():
     Artist.drop_table()
     Art.drop_table()
+    Artist.create_table()
+    Art.create_table()
+
 
 reset_db()
