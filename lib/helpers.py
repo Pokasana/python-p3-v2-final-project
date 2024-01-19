@@ -8,8 +8,11 @@ def list_artists():
     artists = Artist.get_all()
     print("*** Artists ***")
 
-    for artist in artists:
-        print(f'  {artist.id}) {artist.name}')
+    if artists:
+        for artist in artists:
+            print(f'  {artist.id}) {artist.name}')
+    else:
+        print('There is no artist in the database... :(')
 
 def display_artist_info(id_):
     artist = Artist.find_by_id(id_)
